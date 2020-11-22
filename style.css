@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --violet: hsl(257, 40%, 49%);
+}
+
+body{
+    max-width: 1440px;
+    height: 100vh;
+    background-image: url("./images/bg-desktop.svg");
+    background-color: var(--violet);
+    padding: 0 60px;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.mb{
+    margin-bottom: 20px;
+}
+
+/* logo */
+
+.logo{
+    display: block;
+    padding: 5% 0;
+    margin-bottom: 15px;
+
+}
+
+.logo img{
+    width: 15em;
+}
+
+/* container */
+
+.container{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .imagen img{
+    width: 100%;
+    min-width: 80%;
+}
+
+.container .info{
+    width: 500px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: rgb(233, 233, 233);
+
+    margin-left: 5%;
+    margin-top: 4%;
+}
+
+@media (max-width: 1050px){
+    .container .info{
+        font-size: calc(.8rem + .5vw);
+        width: 550px;
+    }
+}
+
+/* container boton */
+
+.btn{
+    display: inline-block;
+    background-color: rgb(252, 252, 252);
+    padding: 15px 65px;
+    border-radius: 30px;
+    box-shadow: 3px 1px 20px -6px black;
+    margin-bottom: 4em;
+}
+
+.btn a{
+    color: var(--violet);
+    text-decoration: none;
+
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+/* redes */
+
+.redes{
+    display: block;
+    text-align: right;
+}
+
+.redes > a{
+    margin-right: 10px;
+}
+
+.redes img{
+    width: 2.2em;
+    filter: invert(100%);
+}
+
+
+@media (max-width: 850px){
+    :root{
+        font-size: 14px;
+    }
+
+    .btn{
+        padding: 10px 60px;
+}
+
+@media (max-width: 750px){
+    .container{
+        display: block;
+    }
+    .btn{
+        margin-bottom: 4em;
+        padding: 10px 100px;
+    }
+
+    body{
+        text-align: center;
+        padding: 7%;
+    }
+
+    .logo{
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .container .imagen img{
+        margin-bottom: 30px;
+    }
+
+    .container .info{
+        width: 90%;
+        font-size: 1.1rem;
+    }
+
+    .container .info p{
+        font-size: 1.4rem;
+    }
+
+    .redes{
+        text-align: center;
+    }
+}
